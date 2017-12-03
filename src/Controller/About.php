@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: 1
- * Date: 01.12.2017
- * Time: 20:46
+ * User: user
+ * Date: 03.12.2017
+ * Time: 21:51
  */
 
 namespace App\Controller;
@@ -12,17 +12,17 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-    class LuckyController extends Controller
+class About extends Controller
 {
     /**
      *
-     * @Route("/lucky/number")
+     * @Route("/ishop/about")
      * @return Response
      */
 
     public function number(){
         $number = mt_rand(1, 100);
-        return $this->render('lucky/number.html.twig', array(
+        return $this->render('ishop/about.html.twig', array(
             'number' => $number,
         ));
     }
