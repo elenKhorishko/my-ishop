@@ -8,22 +8,34 @@
 
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class About extends Controller
 {
     /**
-     *
-     * @Route("/ishop/about")
-     * @return Response
+         * @Route("/ishop/about", name="about_show")
      */
 
-    public function number(){
-        $number = mt_rand(1, 100);
-        return $this->render('ishop/about.html.twig', array(
-            'number' => $number,
-        ));
+    public function showAbout(SessionInterface $session)
+    {
+        $url = $this->generateUrl('category_show', [
+            'slug' => 'notebooks',
+            'param' => 'getparam',
+        ], UrlGeneratorInterface::ABSOLUTE_URL);
+        return $this->render('ishop/about.html.twig', [
+            'notebooksUrl' => $url,
+            'lastCategory'=> $session->get('lastVisitedCategory')
+        ]);
+    }
+
+    /** переадресация страницы
+     * @Route("/ishop/to-about")
+     */
+    public function redirectToShow()
+    {
+        return $this->redirectToRoute('about_show');
     }
 }
