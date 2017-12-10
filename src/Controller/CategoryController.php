@@ -8,7 +8,7 @@
 
 namespace App\Controller;
 
-
+use App\Entity\Category;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,44 +19,34 @@ class CategoryController extends Controller
 
 {
     /**
-     * @Route("/category/{slug}/{page}",
-     *     name="category_show",
-     *     requirements={"page" = "\d+"})
-     *
-     * @param $slug
-     * @param $page
-     * @param $session
-     *
-     * @return Response
+     * @Route("/category/{id}", name="category_show")
      */
-    public function show($slug, $page=1, SessionInterface $session, Request $request)
+    public function show(Category $category)
     {
-        $session->set('lastVisitedCategory', $slug);
-        $param = $request->query->get('param');
+        return $this->render('category/show.html.twig', ['category' => $category]);
 
-        return $this->render('category/show.html.twig',
-            ['slug' => $slug, 'page' => $page, 'param' => $param]);
     }
+
 
     /**
-     * @Route("/message", name = "category_message")
+     * @Route("/category/{name}", name="$category_list")
      */
-    public function message(SessionInterface $session)
+    public function listCategory($name = '')
     {
-        $this->addFlash('notice', 'Successfully added');
-        $lastCategory = $session->get('lastVisitedCategory');
+        $repo = $this->getDoctrine()->getRepository(Category::class);
 
-        return $this->redirectToRoute('category_show', ['slug'=>$lastCategory]);
+        if($name){
+            $category = $repo->findBy(['name' => $name]);
+        } else {
+            $category = $repo->findAll();
+        }
+
+        if(!$category){
+            throw $this->createNotFoundException('Category not found!');
+        }
+
+        return $this->render('category/list.html.twig', ['category' => $category]);
+
     }
 
-    /**
-     * @Route("download", name = "category_download")
-     */
-    public function fileDownload()
-    {
-        $response = new Response();
-        $response->setContent('Test content');
-
-        return $response;
-    }
 }
