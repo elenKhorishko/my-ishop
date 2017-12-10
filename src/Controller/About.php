@@ -18,7 +18,7 @@ class About extends Controller
      * @Route("/ishop/about")
      */
 
-    public function number(){
+    public function showAbout(){
         return $this->render('ishop/about.html.twig');
     }
 }
