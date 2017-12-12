@@ -1,4 +1,4 @@
 {% for category in category %}
-    {{ category.name }} <br>
+    <a href="{{ path('category_show', {'id': category.id} ) }}">{{ category.name }} </a> <br>
     <hr>
 {% endfor %}
