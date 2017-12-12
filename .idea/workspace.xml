@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="280c301a-080c-48db-8252-a893e349b584" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/my-ishop.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/skillup_ishop.sql" afterPath="$PROJECT_DIR$/skillup_ishop.sql" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" />
-      <change beforePath="$PROJECT_DIR$/templates/category/list.html.twig" afterPath="$PROJECT_DIR$/templates/category/list.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/category/show.html.twig" afterPath="$PROJECT_DIR$/templates/category/show.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -246,7 +238,7 @@
       <workItem from="1512908176688" duration="7318000" />
       <workItem from="1512916043887" duration="6556000" />
       <workItem from="1512923661628" duration="2043000" />
-      <workItem from="1513098222480" duration="1944000" />
+      <workItem from="1513098222480" duration="1995000" />
     </task>
     <task id="LOCAL-00001" summary="commit HW less 17">
       <created>1512332014932</created>
@@ -290,11 +282,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512917486419</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit less 20 - gitignor">
+      <created>1513100200490</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1513100200491</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31271000" />
+    <option name="totallyTimeSpent" value="31322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -331,7 +330,8 @@
     <MESSAGE value="commit HW less 17" />
     <MESSAGE value="commit less 18" />
     <MESSAGE value="commit less 19" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit less 19" />
+    <MESSAGE value="commit less 20 - gitignor" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit less 20 - gitignor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
