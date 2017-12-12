@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -21,6 +23,13 @@ class Category
      * @ORM\Column(type="string", length=250)
      */
     private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", length=250, unique=true)
+     */
+    private $slug;
 
     /**
      * @return mixed
@@ -58,5 +67,59 @@ class Category
         return $this;
     }
 
-    // add your own fields
+
+    /**
+     * @return string
+     */
+    public function getSlug(): string
+    {
+        return $this->slug;
+    }
+
+    /**
+     * @param string $slug
+     * @return Category
+     */
+    public function setSlug(string $slug): Category
+    {
+        $this->slug = $slug;
+        return $this;
+    }
+
+    /**
+     * @var Product[]|ArrayCollection
+     * @ORM\OneToMany(targetEntity="App\Entity\Product", mappedBy="category")
+     */
+    private $products;
+
+    /**
+     * @return Product[]|ArrayCollection
+     */
+    public function getProducts(): Collection
+    {
+        return $this->products;
+    }
+
+    /**
+     * @param Product[]|ArrayCollection $products
+     * @return Category
+     */
+    public function setProducts($products)
+    {
+        $this->products = $products;
+        return $this;
+    }
+
+    public function addProduct(Product $product)
+    {
+        $this->products->add($product);
+        $product->setCategory($this);
+        return $this;
+    }
+
+    public function removeProduct(Product $product)
+    {
+        $this->products->removeElement($product);
+        return $this;
+    }
 }

@@ -9,6 +9,7 @@
 namespace App\Controller;
 
 use App\Entity\Category;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,7 +20,10 @@ class CategoryController extends Controller
 
 {
     /**
-     * @Route("/category/{id}/{page}", name="category_show")
+     * @Route("/category/{slug}/{page}",
+     *     name="category_show",
+     *     requirements={"page" = "\d+"})
+     * @ParamConverter("slug", options={"mapping": {"slug" = "slug"}})
      */
     public function show(Category $category, $page = 1)
     {
@@ -28,7 +32,7 @@ class CategoryController extends Controller
 
 
     /**
-     * @Route("/category/{name}", name="$category_list")
+     * @Route("/categories", name="category_list")
      */
     public function listCategory($name = '')
     {
@@ -47,5 +51,6 @@ class CategoryController extends Controller
         return $this->render('category/list.html.twig', ['category' => $category]);
 
     }
+
 
 }
