@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="280c301a-080c-48db-8252-a893e349b584" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/templates/category/list.html.twig" afterPath="$PROJECT_DIR$/templates/category/list.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/category/show.html.twig" afterPath="$PROJECT_DIR$/templates/category/show.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/ishop/about.html.twig" afterPath="$PROJECT_DIR$/templates/ishop/about.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/lucky/number.html.twig" afterPath="$PROJECT_DIR$/templates/lucky/number.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/product/list.html.twig" afterPath="$PROJECT_DIR$/templates/product/list.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/product/show.html.twig" afterPath="$PROJECT_DIR$/templates/product/show.html.twig" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/my-ishop.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,33 +36,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="skillup_ishop@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="skillup_ishop@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="skillup_ishop: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="skillup_ishop@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="skillup_ishop: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="category: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="skillup_ishop@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="skillup_ishop: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="migration_versions: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="skillup_ishop@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="skillup_ishop: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="product: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -252,7 +223,7 @@
       <workItem from="1512923661628" duration="2043000" />
       <workItem from="1513098222480" duration="7874000" />
       <workItem from="1513187797476" duration="63000" />
-      <workItem from="1513187908084" duration="2929000" />
+      <workItem from="1513187908084" duration="3401000" />
     </task>
     <task id="LOCAL-00001" summary="commit HW less 17">
       <created>1512332014932</created>
@@ -317,11 +288,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513106028064</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="commit HW lesson 20">
+      <created>1513191723057</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1513191723057</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40193000" />
+    <option name="totallyTimeSpent" value="40665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -360,7 +338,8 @@
     <MESSAGE value="commit less 19" />
     <MESSAGE value="commit less 20 - gitignor" />
     <MESSAGE value="commit less 20" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit less 20" />
+    <MESSAGE value="commit HW lesson 20" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit HW lesson 20" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
