@@ -1,13 +1,21 @@
-Category: {{ category.name }} <br>
-Page: {{ page }} <br>
+{% extends 'base.html.twig' %}
 
-Продукты: <hr>
+{% block title %}
+    Категория товаров
+{% endblock %}
 
-{% for product in category.products %}
-    <a href="{{ path('product_show', {'id' : product.id}) }}">
-        {{ product.name }} - {{ product.price|number_format(2, ',', ' ') }}
-        </a>
-    <hr>
-{% endfor %}
 
+{% block body %}
+    Category: {{ category.name }} <br>
+    Page: {{ page }} <br>
+
+    Продукты: <hr>
+
+    {% for product in category.products %}
+        <a href="{{ path('product_show', {'id' : product.id}) }}">
+            {{ product.name }} - {{ product.price|number_format(2, ',', ' ') }}
+            </a>
+        <hr>
+    {% endfor %}
+{% endblock %}
 
