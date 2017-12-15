@@ -6,6 +6,12 @@
 
 
 {% block body %}
+
+    {% for message in app.flashes('notice') %}
+        <p>{{ message }}</p>
+    {% endfor %}
+
+
     Category: {{ category.name }} <br>
     Page: {{ page }} <br>
 
@@ -17,5 +23,8 @@
             </a>
         <hr>
     {% endfor %}
+
+    <a href="{{ path('category_message') }}">Add to cart</a>
+
 {% endblock %}
 

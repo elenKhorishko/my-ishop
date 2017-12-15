@@ -32,6 +32,27 @@ class Category
     private $slug;
 
     /**
+     * @var Product[]|ArrayCollection
+     * @ORM\OneToMany(targetEntity="App\Entity\Product", mappedBy="category")
+     */
+    private $products;
+
+    /**
+     * @var Category
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="subcategories")
+     * @ORM\JoinColumn(name="parent_id", onDelete="CASCADE")
+     */
+    private $parent;
+
+    /**
+     * @var Category[]|ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="App\Entity\Category", mappedBy="parent")
+     */
+    private $subcategories;
+
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -85,12 +106,6 @@ class Category
         $this->slug = $slug;
         return $this;
     }
-
-    /**
-     * @var Product[]|ArrayCollection
-     * @ORM\OneToMany(targetEntity="App\Entity\Product", mappedBy="category")
-     */
-    private $products;
 
     /**
      * @return Product[]|ArrayCollection
