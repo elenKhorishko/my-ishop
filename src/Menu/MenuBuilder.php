@@ -35,8 +35,9 @@ class MenuBuilder
     {
         $menu = $this->factory->createItem('root');
 
-        $menu->addChild('Главная', ['route' => 'about_show']);
+        $menu->addChild('Главная', ['route' => 'homepage']);
         $catalogueMenu = $menu->addChild('Каталог', ['route' => 'categoies_list']);
+        $catalogueMenu->setExtra('dropdown', true);
 
         foreach ($this->catalogueService->getTopCategories() as $category) {
             $catalogueMenu->addChild($category->getName(), [
