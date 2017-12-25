@@ -131,6 +131,28 @@ class Product
         return $this;
     }
 
+    /**
+     * @var boolean
+     * @ORM\Column(type="boolean")
+     */
+    private $isTop;
 
+    /**
+     * @return bool
+     */
+    public function isTop(): bool
+    {
+        return $this->isTop;
+    }
+
+    /**
+     * @param bool $isTop
+     * @return Product
+     */
+    public function setIsTop(bool $isTop): Product
+    {
+        $this->isTop = $isTop;
+        return $this;
+    }
 
 }

@@ -75,5 +75,7 @@ class ProductController extends Controller
         return $this->render('product/show.html.twig', ['product' => $product]);
     }
 
+
+
 }
 

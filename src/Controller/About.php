@@ -20,7 +20,6 @@ class About extends Controller
      *
      * @Route("/ishop/about", name = "about_show")
      */
-
     public function show(SessionInterface $session)
     {
         $url = $this->generateUrl('category_show', [

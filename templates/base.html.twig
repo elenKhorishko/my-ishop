@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Супермагазин{% endblock %}</title>
+        <title>{% block title %}КАLINКА{% endblock %}</title>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
               integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -14,8 +14,9 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-
-        <nav class="navbar navbar-default">
+    <a href=""><img src="https://dobrolab.com/-raboty/kalinka-shop/logo/kalinka-logo-big.png"
+                    width="300" height="60" style="margin: 10px" ></a>
+            <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -25,7 +26,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Brand</a>
+                    <a class="navbar-brand" href="#">I-SHOP</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -35,9 +36,9 @@
 
                     <form class="navbar-form navbar-left">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="Поиск">
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default">Найти</button>
                     </form>
                     <ul class="nav navbar-nav navbar-right">
                         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
@@ -91,7 +92,10 @@
                             </li>
                         {% endif %}
 
-                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Регистрация</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Условия доставки и оплаты</a></li>
+                        <li><a class="btn btn-large" href="#"><i class=""></i> Корзина</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
