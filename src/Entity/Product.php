@@ -132,10 +132,15 @@ class Product
     }
 
     /**
-     * @var boolean
-     * @ORM\Column(type="boolean")
+     * @var bool
+     * @ORM\Column(type="boolean", options={"default" : false})
      */
     private $isTop;
+
+    public function __construct()
+    {
+        $this->isTop = false;
+    }
 
     /**
      * @return bool
@@ -154,5 +159,6 @@ class Product
         $this->isTop = $isTop;
         return $this;
     }
+
 
 }
