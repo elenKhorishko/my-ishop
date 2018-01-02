@@ -110,7 +110,7 @@ class Category
     /**
      * @return Product[]|ArrayCollection
      */
-    public function getProducts(): Collection
+    public function getProducts(): ? Collection
     {
         return $this->products;
     }
