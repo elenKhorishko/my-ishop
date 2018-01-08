@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43a3798a-cd34-43fe-8347-578f457897e6" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/translations/SonataAdminBundle.ru.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/translations/messages.ru.yaml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/cache/products_list/images/products/images.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/images/cache/products_list/images/products/laptop.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config/packages/admin.yaml" afterPath="$PROJECT_DIR$/config/packages/admin.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" afterPath="$PROJECT_DIR$/src/Entity/Product.php" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" afterPath="$PROJECT_DIR$/config/bundles.php" />
+      <change beforePath="$PROJECT_DIR$/skillup_ishop.sql" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -95,17 +95,17 @@
         <option value="$PROJECT_DIR$/src/Entity/Category.php" />
         <option value="$PROJECT_DIR$/config/packages/translation.yaml" />
         <option value="$PROJECT_DIR$/config/packages/vich_uploader.yaml" />
-        <option value="$PROJECT_DIR$/config/bundles.php" />
         <option value="$PROJECT_DIR$/src/Admin/ProductAdmin.php" />
         <option value="$PROJECT_DIR$/symfony.lock" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/config/packages/imagine.yaml" />
         <option value="$PROJECT_DIR$/config/routes/imagine.yaml" />
         <option value="$PROJECT_DIR$/templates/default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Product.php" />
         <option value="$PROJECT_DIR$/translations/messages.ru.yaml" />
         <option value="$PROJECT_DIR$/config/packages/admin.yaml" />
         <option value="$PROJECT_DIR$/translations/SonataAdminBundle.ru.yaml" />
+        <option value="$PROJECT_DIR$/config/packages/imagine.yaml" />
+        <option value="$PROJECT_DIR$/config/bundles.php" />
       </list>
     </option>
   </component>
@@ -240,38 +240,6 @@
               <item name="my-ishop" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-ishop" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="my-ishop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-ishop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="my-ishop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-ishop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="my-ishop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-ishop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="my-ishop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-ishop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="my-ishop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-ishop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="my-ishop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-ishop" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="translations" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -350,11 +318,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515430515837</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit Lesson_25_3">
+      <created>1515431471912</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1515431471912</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55262000" />
+    <option name="totallyTimeSpent" value="56169000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -372,9 +347,9 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -432,7 +407,8 @@
     <MESSAGE value="Commit Lesson_24 Sonata" />
     <MESSAGE value="Commit Lesson_24 Sonata1" />
     <MESSAGE value="Commit Lesson_25_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Lesson_25_2" />
+    <MESSAGE value="Commit Lesson_25_3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Lesson_25_3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -677,14 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes/imagine.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="64" lean-forward="false" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -725,26 +693,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/bundles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/liip/imagine-bundle/DependencyInjection/Configuration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+        <state relative-caret-position="-1337">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/imagine.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state relative-caret-position="340">
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes/imagine.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/bundles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
           <folding />
         </state>
       </provider>
