@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Корзина - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <h3>Заказы пользователя</h3>
+
+    <style>
+        TABLE {border: 5px double; width: 600px;}
+        TH {text-align: center;}
+        TD {text-align: center;}
+        TH, TD { border: 1px solid ;}
+        .itog {text-align: right;}
+    </style>
+
+
+    {% set sum = 0 %}
+    {% set value = 0 %}
+
+    {% for items in order %}
+        {% set value = count * amount %}
+        {% set sum = sum + value %}
+
+    {% endfor %}
+
+            <table>
+                <tr>
+                    <th>Товар</th>
+                    <th>Цена</th>
+                    <th>Количество</th>
+                    <th>Стоимость</th>
+                    </tr>
+                <tr>
+                    <td>{{ order.status }}</td>
+                    <td>{{ order.count }}</td>
+                    <td>{{ order.amount }}</td>
+                    <td>{{ value }}</td>
+                </tr>
+                <tr>
+                    <th class="itog" colspan="3">Итого</th>
+                    <th>{{ sum }}</th>
+                </tr>
+            </table>
+
+{% endblock %}

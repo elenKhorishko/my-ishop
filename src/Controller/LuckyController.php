@@ -19,7 +19,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
      * @Route("/lucky/number")
      * @return Response
      */
-
     public function number(){
         $number = mt_rand(1, 100);
         return $this->render('lucky/number.html.twig', array(
