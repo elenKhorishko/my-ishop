@@ -22,7 +22,6 @@
     {% for items in order %}
         {% set value = count * amount %}
         {% set sum = sum + value %}
-
     {% endfor %}
 
             <table>
@@ -33,9 +32,9 @@
                     <th>Стоимость</th>
                     </tr>
                 <tr>
-                    <td>{{ order.status }}</td>
-                    <td>{{ order.count }}</td>
-                    <td>{{ order.amount }}</td>
+                    <td>{{ orderItem.product }}</td>
+                    <td>{{ orderItem.count }}</td>
+                    <td>{{ orderItem.amount }}</td>
                     <td>{{ value }}</td>
                 </tr>
                 <tr>

@@ -9,20 +9,19 @@
 namespace App\Controller;
 
 use App\Entity\Order;
-use App\Entity\OrderItem;
-use App\Entity\Product;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
+
 
 class OrderController extends Controller
 {
     /**
      * @Route("/cart/{id}", name="cart_show")
+     * var $orderItem
      */
-    public function show(Order $order)
+    public function show(Order $order, $orderItem='')
     {
-        return $this->render('cart/show.html.twig', ['order' => $order, 'product' => Product::class]);
+        $order->getItems();
+        return $this->render('cart/show.html.twig', ['order' => $order]);
     }
 }
