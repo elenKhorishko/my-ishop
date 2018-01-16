@@ -47,6 +47,7 @@ class MenuBuilder
         }
 
         // ... add more children
+        $menu->addChild('Регистрация', ['route' => 'fos_user_registration_register']);
 
         return $menu;
     }
