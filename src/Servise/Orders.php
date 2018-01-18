@@ -73,4 +73,19 @@ class Orders
         $this->em->flush();
     }
 
+    /**
+     * @param OrderItem $item
+     * @return $this
+     */
+    public function removeItems(OrderItem $item)
+    {
+        $order = $this->getCurrentOrder();
+
+        $item = $order->getItems();
+        $item->removeElement($item);
+        $order->recalculateItems();
+
+        $this->em->flush();
+    }
+
 }
