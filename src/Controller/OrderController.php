@@ -11,6 +11,7 @@ namespace App\Controller;
 use App\Entity\Order;
 use App\Entity\OrderItem;
 use App\Entity\Product;
+use App\Form\OrderType;
 use App\Servise\Orders;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -49,4 +50,64 @@ class OrderController extends Controller
         $orders->removeItems($item);
         return $this->redirectToRoute('order_cart');
     }
+
+    /**
+     * @Route("cart/complete", name="order_complete")
+     */
+    public function completeOrder(Orders $orders, Request $request, \Swift_Mailer $mailer)
+    {
+        $order = $orders->getCurrentOrder();
+        $form = $this->createForm(OrderType::class, $order);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->sendEmailes($order, $mailer);
+            $orders->makeOrder($order);
+            $this->addFlash($order->getId(), 'last_order');
+
+            return $this->redirectToRoute('order_success');
+        }
+
+        return $this->render('cart/completeForm.html.twig', [
+            'order'=> $order,
+            'form' => $form->createView(),
+            ]);
+    }
+
+    /**
+     * @Route("cart/success", name="order_success")
+     */
+    public function successOrder()
+    {
+        return $this->render('cart/success.html.twig');
+    }
+
+    private function sendEmailes(Order $order, \Swift_Mailer $mailer)
+    {
+        $message = (new \Swift_Message('Новый заказ на сайте'))
+            ->setFrom([getenv('MAILER_FROM')=> getenv('MAILER_FROM_NAME')])
+            ->setTo(getenv('ADMIN_EMAIL'))
+            ->setBody(
+                $this->renderView(
+                    'cart/admin_message.html.twig',
+                    array('order' => $order)
+                ),
+                'text/html'
+            );
+        $mailer->send($message);
+
+
+        $message = (new \Swift_Message('Ваш заказ'))
+            ->setFrom([getenv('MAILER_FROM')=> getenv('MAILER_FROM_NAME')])
+            ->setTo([$order->getEmail() => $order->getCustomerName()])
+            ->setBody(
+                $this->renderView(
+                    'cart/customer_message.html.twig',
+                    array('order' => $order)
+                ),
+                'text/html'
+            );
+        $mailer->send($message);
+    }
+
 }

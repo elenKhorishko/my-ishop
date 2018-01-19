@@ -8,46 +8,9 @@
     <div class="container">
         <h3>Заказы пользователя</h3>
 
-        <style>
-            TABLE {border: 5px double; width: 600px;}
-            TH {text-align: center;}
-            TD {text-align: center;}
-            TH, TD { border: 1px solid ;}
-            .itog {text-align: right;}
-        </style>
+        {% include 'cart/items.html.twig' with {'order': order} %}
 
+        <a href="{{ path('order_complete') }}">Оформить заказ</a>
 
-
-        <table>
-            <tr>
-                <th>Товар</th>
-                <th>Цена</th>
-                <th>Количество</th>
-                <th colspan="2">Стоимость</th>
-            </tr>
-
-            <tr>
-
-            {#@var item \App\Entity\OrderItem #}
-            {% for item in order.items %}
-                <tr>
-                    <td>{{ item.product.name }}</td>
-                    <td>{{ item.product.price }}</td>
-                    <td>{{ item.count}}</td>
-                    <td>{{ item.amount }}</td>
-                    <td><a href="{{ path('order_remove_item', {'id': item.id}) }}"><span class="glyphicon glyphicon-remove"></span></a></td>
-
-                </tr>
-            {% endfor %}
-
-            <tr>
-
-                <th class="itog" colspan="2">Итого</th>
-                <th>{{ order.count }}</th>
-                <th colspan="2">{{ order.amount }}</th>
-
-            </tr>
-        </table>
     </div>
-
 {% endblock %}
