@@ -43,7 +43,6 @@ class OrderController extends Controller
     /**
      * @Route("cart/remove-item/{id}", name="order_remove_item")
      * @param OrderItem $item
-     * @param Orders $orders
      */
     public function removeItem(OrderItem $item, Orders $orders)
     {

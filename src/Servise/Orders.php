@@ -81,11 +81,11 @@ class Orders
     {
         $order = $this->getCurrentOrder();
 
-        $item = $order->getItems();
-        $item->removeElement($item);
-        $order->recalculateItems();
-
+        $this->em->remove($item);
         $this->em->flush();
+        $this->getCurrentOrder()->recalculateItems();
+        $this->em->flush();
+
     }
 
 }

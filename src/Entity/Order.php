@@ -326,7 +326,7 @@ class Order
      */
     public function removeProduct(OrderItem $item)
     {
-        $this->items->removeElement($item);
+        $this->items->removeItems($item);
         $this->recalculateItems();
 
         return $this;
