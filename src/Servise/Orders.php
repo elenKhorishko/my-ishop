@@ -87,6 +87,7 @@ class Orders
         $this->getCurrentOrder()->recalculateItems();
         $this->em->flush();
 
+
     }
 
     public function makeOrder(Order $order)
