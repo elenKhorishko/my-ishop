@@ -132,6 +132,10 @@ class OrderItem
     public function setCount(float $count): OrderItem
     {
         $this->count = $count;
+        $this->amount = $this->product->getPrice() * $count; // при изменении количества пересчитываем общую сумму
+        $this->order->recalculateItems(); // пересчет итогов в заказе
+
+
         return $this;
     }
 

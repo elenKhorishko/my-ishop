@@ -13,6 +13,13 @@ Amount: Стоимость
 Status: Статус
 Address: Адрес
 Phone: Телефон
-Crested At: Дата заказа
+Crested At: Дата создания
 Customer Name: Имя покупателя
-
+Is Paid: Оплачено?
+Edit Order: Заказ
+Manage Items: Заказанные товары
+completed: Завершен
+received: Доставлен
+sent: Отправлен
+ordered: Заказан
+draft: Черновик
